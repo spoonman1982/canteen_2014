@@ -1,0 +1,19 @@
+<div id="col3">
+	<div id="latest_news">
+		 <h3>Latest News</h3>
+	 <% news_item = News.order("created_at").first %>
+    <% if news_item.present? %>
+     <div class="title">
+        <h4><%= news_item.article_title %></h4>
+        <span><%= (news_item.created_at).strftime("Posted  on %m/%d/%Y") %></span>
+    </div>
+       <%# if news_item.article_image? %>
+       	<%#= image_tag news_item.article_image_url(:thumb).to_s, :width => 150 %>
+       <%# end%>
+        <div style="clear:both"></div>
+        <p><%= news_item.article_content%></p>
+     <% else %>
+        <strong><p>No news today</p></strong>
+     <% end %>
+  </div>
+</div>

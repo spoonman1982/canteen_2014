@@ -1,0 +1,71 @@
+<div id="col2" class="column">
+
+ <% content_for :title, "Community News" %>
+
+  <%# if admin_user %>
+  
+
+<fieldset>
+    <%= form_for @news_item, :html =>  {:class => "form-horizontal", :multipart => true } do |f| %>
+        <% if @news_item.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize( @news_item.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+            <ul>
+            <%  @news_item.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+      <div class="control-group">
+        
+        <strong><h3>Enter News Article</h3></strong>
+        
+        <%= f.label :article_name, "Article Title", class: "control-label" %>
+            <div class="controls">
+        <%= f.text_field :article_title, class: "input-xlarge" %></div></div>
+           <div class="control-group">
+        
+        <%= f.label :article_content, "Content", class: "control-label" %>
+            <div class="controls">
+        <%= f.text_area :article_content, :rows => '7', class: "input-xlarge" %></div></div>
+        
+        <%= f.label :article_image, "Image", class: "control-label" %>
+            <div class="controls">
+        <%= f.file_field :article_image, class: "input-xlarge" %></div>
+          <br/>
+            <div class="control-group"> <div class="controls">
+        <%= f.submit "Submit", class: "btn btn-primary btn-large" %> </div></div>
+
+    <% end %>
+  </fieldset>
+  <br/>
+
+
+<div id="news_items">
+   <h3>Latest News</h3>
+  <ul>
+    <% @news_items.each do |news_item|%>
+    <% if news_item.present? %>
+      <div class="title">
+        <h4><%= news_item.article_title %></h4>
+        <span><%= (news_item.created_at).strftime("Posted  on %m/%d/%Y") %></span><br/>
+    </div>
+        <% if news_item.article_image? %>
+        <%= image_tag news_item.article_image_url(:thumb).to_s, :width => 250 %>
+        <%end%>
+        <div style="clear:both"></div>
+        <p><%= news_item.article_content%></p>
+        <%= button_to 'Destroy', news_item, method: :delete, data: { confirm: 'Are you sure?' } %>
+     <br/>
+     <hr/>
+     <% else %>
+        <strong><p>No news today</p></strong>
+     <% end %>
+   <% end %>
+ </ul>
+</div>
+
+</div>

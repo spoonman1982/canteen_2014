@@ -1,0 +1,188 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ /*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require bootstrap-responsive
+ *= require bootstrap
+ *= require jquery.Jcrop
+ *= require_self
+ *= require_tree .
+ */
+
+
+body{
+	background-image: url(bg_strip2.png);
+	background-repeat: repeat-x;
+	background-color: #ff6519;
+	font-family: verdana, arial, helvetica, sans-serif;
+  	font-size: 13px;
+  	line-height: 18px;
+  }
+
+
+
+.canteen_container{
+	width: 80%;
+	margin: auto;
+}
+	
+.logo{	
+	display: block;
+	height: 165px;
+	width:380px;
+	text-indent: -999em;
+	overflow: hidden;
+	background: url(logo2.gif) no-repeat;
+}	
+	
+#header {}
+
+
+
+
+ul#networks{
+	width: 264px;
+	height: 85px;
+	background: url(bg-networks.png) no-repeat;
+	float:right;
+	margin: 0px; 
+	padding: 0px
+
+}
+#networks li{
+	text-decoration:none;
+	display:block;
+	float:left;
+	}
+
+#networks li a {
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#networks li a.linkedin	{ background: url(bg-networks-linkedin.png) no-repeat; width: 70px; height: 75px;}
+#networks li a.youtube 	{ background: url(bg-networks-youtube.png) no-repeat; width: 63px; height: 75px;}
+#networks li a.twitter 	{ background: url(bg-networks-twitter.png) no-repeat; width: 65px; height: 75px;}
+#networks li a.facebook	{ background: url(bg-networks-facebook.png) no-repeat; width: 56px; height: 75px;}
+
+#super_nav {
+	margin: auto auto;
+	position:relative;
+	height:40px;
+	width:980px;
+	}
+#nav {
+	margin: auto auto;
+	width: 960px;
+	height: 29px;
+	background-color: #e80001;
+	border-radius:5px;
+	position: relative;
+	}
+	
+#nav ul {list-style:none;padding-left:5px; margin-top:0px;}
+	
+#nav li {float:left; width:118px; margin:0;padding:0; text-align:center;}
+	
+#nav li a {display:block; padding:5px 15px;height:100%;  text-decoration:none; border-right:1px solid #FFF; background-color: #e80001; color:#FFF;}
+#nav li a.no_border {border-right:none; }
+		
+#nav li a:hover, li a:focus, li a:active {background-color:#fef200;  color:#000} 
+
+#overlay {
+	background:url(bg-main-nav.png) no-repeat;
+	width: 980px;
+	height: 19px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	}
+
+.page{
+	border-radius: 10px; background-color: #ffffff;
+	padding-top: 20px;
+}
+
+#master{position: relative; overflow: hidden; width: 100%; }
+	
+.wrapper{ padding: 0px 20px 0px 20px ; }
+	
+#col1{
+  min-height:600px;
+  background-color: #fff;
+  width: 100px;
+  float:left;
+  /*margin-right: 5px;*/
+  padding:0 18px 0 18px;
+}
+
+#col2{
+border-left: dotted 1px;
+ min-height: 600px;
+ /*background-color: #DDD;*/
+ width: 617px;
+ /*margin-right: 5px;*/
+ padding-top: 0px;
+ position: relative;
+ float: left;
+}
+
+#home{
+  min-height:600px;
+  background-color: #DDD;
+  width: 655px;
+  margin-right: 5px;
+  padding:0;
+}
+
+#col3{
+  float: left;
+  min-height:600px;
+  background-color: #666;
+  width: 185px;
+  /*padding:0 18px 0 18px;*/
+}
+
+.footer{
+
+  min-height: 150px;
+  background-color: #B55959;
+  margin: 10px 0 20px 0
+}
+
+
+
+/* Image Slider */
+	
+.slider{ width: 618px; height: 335px; margin-bottom: 10px; overflow: hidden; float: left; }
+	
+.slider img { padding: 10px; border: 0px; background-color: #eee; width: 598px; height: 315px; top: 0; left: 0; }
+
+/* Image Slider End*/
+
+
+ul.key_features {width: 630px; padding: 0; list-style: none;}
+
+ul.key_features li{ display: block; width: 305px; float: left; min-height: 300px; background-color: #EEE; border-radius: 10px; margin: 0 0 10px 10px; }
+
+
+
+.main_image img {margin: auto; display: block; border: solid 10px #DDD;}

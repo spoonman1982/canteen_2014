@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canteen2014</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="canteen_container">
+	<div class="row-fluid header">
+		<div class="span3">
+
+<a href="/" class="logo">Canteen Ireland</a>
+		</div><!-- span3 -->
+		
+		<div class="span4 offset5">
+			<ul id="networks" style="margin: 0px; padding: 0px">
+				<li><a href="#" class="linkedin" rel="external"></a></li>		
+				<li><a href="http://www.youtube.com/user/CanTeenIreland1" class="youtube" rel="external"></a></li>
+				<li><a href="https://twitter.com/CanTeen_Ireland" class="twitter" rel="external"></a></li>
+				<li><a href="https://www.facebook.com/CanTeenIreland" class="facebook" rel="external"></a></li>
+			</ul>
+		</div><!-- span4 offset5 -->
+
+</div> <!-- row-fluid -->
+
+
+	<%= render "layouts/main_nav"%>
+
+
+	
+
+		<div class="row-fluid">
+      		<div class="span12">
+      			<div class="page">
+			        <div class="wrapper">
+
+
+							<%# unless params[:action] == 'home'%>
+							<%= render "layouts/left_hand_column"%>
+							<%# end %>
+							<%= yield %>
+							<%= render "layouts/right_hand_column"%>
+							 <div style="clear:both"></div>
+							<%= render "layouts/footer"%>
+
+			         
+			        </div><!-- /wrapper -->
+  
+      		</div><!-- /page -->
+  		</div><!-- /span12 -->
+    </div><!-- /fluid row -->
+</div><!-- /container -->
+</body>
+</html>

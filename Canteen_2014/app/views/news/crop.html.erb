@@ -1,0 +1,27 @@
+<div id="col2" class="column">
+<h1>Crop Image</h1>
+<%=image_tag  @news_item.article_image_url(:large).to_s, :id => "cropbox" %>
+
+<h4>Preview</h4>
+<div style="width:150px; height:100px; overflow:hidden">
+  <%= image_tag @news_item.article_image_url(:large), :id => "preview" %>
+</div>
+
+
+<%= form_for @news_item do |f| %>
+	<% %w[x y w h].each do |attribute| %>
+		<%= f.text_field  "crop_#{attribute}", :id => "crop_#{attribute}" %>
+	<% end %>
+	<%= f.submit "Crop" %>
+<% end %>
+
+
+
+  <div class="actions">
+    <%# %w[x y w h].each do |attribute| %>
+      <%#= f.text_field "crop_#{attribute}"%>
+    <%# end %>
+    
+  </div>
+<%# end %>
+</div>

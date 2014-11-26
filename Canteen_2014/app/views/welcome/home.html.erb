@@ -1,0 +1,29 @@
+<div id="col2" class="column">
+
+<div class="slider"> 
+	<%= image_tag "alton_towers.jpg", :alt => "alton towers", :height => 270%> 
+	<%= image_tag "baratstown.jpg", :alt =>"baratstown", :height => 270 %> 
+	<%= image_tag "celebs.jpg", :alt => "celeberaty patrons", :height=> 270 %> 
+	<%= image_tag "fire_brigade.jpg", :alt => "dublin city fire brigade", :height => 270 %>
+</div>
+<br>
+<div id="news_items">
+	 <h3>Latest News</h3>
+	 <br/>
+    <% if @news_item.present? %>
+     <div class="title">
+        <h4><%= @news_item.article_title %></h4><br/>
+        <span><%= (@news_item.created_at).strftime("Posted  on %m/%d/%Y") %></span><br/>
+    </div>
+       <% if @news_item.article_image? %>
+       	<%= image_tag @news_item.article_image_url(:thumb).to_s, :width => 150 %>
+       <%end%>
+        <div style="clear:both"></div>
+        <p><%= @news_item.article_content%></p>
+     <% else %>
+        <strong><p>No news today</p></strong>
+     <% end %>
+</div>
+  <%#= button_to "Page Index", pages_path, :method => "get" %>
+
+</div>

@@ -1,0 +1,10 @@
+<div id="col1" class="column">	
+	<% if params[:controller] == 'pages' && params[:action] == "show"%>
+			<h4><%= @page.root.name %></h4>
+		<div id="sub_nav">
+  			<%= render 'layouts/submenu_pages', pages: @page.root.descendants.arrange %>
+		</div>
+	<% else %>
+		<h4> Second Navigation</h4>	
+	<% end %>
+</div>
