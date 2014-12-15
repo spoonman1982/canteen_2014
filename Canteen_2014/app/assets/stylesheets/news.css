@@ -36,7 +36,7 @@
 }
 
 #news_items{
-    width: 560px;
+    width: 100%;
     margin: auto;
     padding: 10px 25px;
     -moz-border-radius:10px;  
@@ -64,12 +64,11 @@
 }
 
 #latest_news{
-    width: 160px;
-    background-image: url(bg_title.png);
-    background-repeat: repeat-y;
+    width: 90%;
     margin: auto;
-    padding: 10px 10px;
-    background-color: #fafad2;  
+    padding-left: 5%;
+    padding-right: 5%;
+    border-bottom: dotted #666;
 }
 
 #latest_news img{ float: right;}

@@ -1,10 +1,9 @@
 
         <div class="row-fluid">
             <div class="span12" style="margin: 0px 0px 0px 20px">
-                <ul class="nav nav-tabs" style="margin-bottom:0px; margin-right: 30px">
-                    <li class="active">
-                        <%= link_to "Home", root_path %>
-                    </li>
+                <ul class="nav nav-tabs" id="main_tabs" style="margin-bottom:0px; margin-right: 30px">
+                    <li><%= link_to "Home", root_path %></li>
+                    <li><%= link_to "About Us", about_us_path %></li>
                     <li><%= link_to "News", :controller => "news", :action => "index" %></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">What We Do&nbsp;<b class="caret"></b></a>
@@ -16,8 +15,23 @@
                             <li><a href="#">Education</a></li>
                         </ul>
                     </li>
-                    <li><%= link_to "About Us", about_us_path %></li>
+                    <li><%= link_to "Get Clued In", clued_in_path %></li>
+                    <li><%= link_to "Volunteer", volunteer_path %></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">News Letters&nbsp;<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Winter 2014</a></li>
+                            <li><a href="#">Autumn 2014</a></li>
+                            <li><a href="#">Summer 2014</a></li>
+                            <li><a href="#">Spring 2012</a></li>
+                        </ul>
+                    </li>
+                    <li><%= link_to "Members Stories", stories_path %></li>
                     <li><%= link_to "Contact Us", contact_us_path %></li>
                 </ul>
             </div>
+
         </div>
+<script>
+main_wrapper_tabs();
+</script>

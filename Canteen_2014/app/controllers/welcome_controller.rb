@@ -8,5 +8,14 @@ class WelcomeController < ApplicationController
 
   def about_us
   end
+
+  def members_stories #members stories
+  end
+
+  def get_clued_in #get clued in
+  end
+
+  def volunteer
+  end
   
 end

@@ -51,3 +51,14 @@ function showCoords(coords)
     marginTop: '-' + Math.round(ry * coords.y) + 'px'
   });
 };
+
+function main_wrapper_tabs(){
+
+        $("ul#main_tabs li").removeClass('active');
+
+        $("ul#main_tabs li a").each(function(){
+            if ($(this).attr("href") == window.location.pathname){
+              $(this).parent().addClass('active');
+            }
+        });
+};

@@ -82,7 +82,7 @@ ul#networks{
 #networks li a.twitter 	{ background: url(bg-networks-twitter.png) no-repeat; width: 65px; height: 75px;}
 #networks li a.facebook	{ background: url(bg-networks-facebook.png) no-repeat; width: 56px; height: 75px;}
 
-#super_nav {
+/*#super_nav {
 	margin: auto auto;
 	position:relative;
 	height:40px;
@@ -104,7 +104,14 @@ ul#networks{
 #nav li a {display:block; padding:5px 15px;height:100%;  text-decoration:none; border-right:1px solid #FFF; background-color: #e80001; color:#FFF;}
 #nav li a.no_border {border-right:none; }
 		
-#nav li a:hover, li a:focus, li a:active {background-color:#fef200;  color:#000} 
+#nav li a:hover, li a:focus, li a:active {background-color:#fef200;  color:#000}
+*/
+ul#main-tabs{
+}
+
+ul#main-tabs  li:hover a{
+	color:#666;
+}
 
 #overlay {
 	background:url(bg-main-nav.png) no-repeat;
@@ -117,19 +124,17 @@ ul#networks{
 	}
 
 .page{
-	border-radius: 10px; background-color: #ffffff;
-	padding-top: 20px;
+	border-radius: 5px; background-color: #ffffff;
+	padding: 10px 0 10px 0;
 }
 
 #master{position: relative; overflow: hidden; width: 100%; }
 	
-.wrapper{ padding: 0px 20px 0px 20px ; }
+.wrapper{ padding: 0px 10px 0px 10px ; }
 	
 #col1{
   min-height:600px;
   background-color: #fff;
-  width: 100px;
-  float:left;
   /*margin-right: 5px;*/
   padding:0 18px 0 18px;
 }
@@ -138,34 +143,28 @@ ul#networks{
 border-left: dotted 1px;
  min-height: 600px;
  /*background-color: #DDD;*/
- width: 617px;
- /*margin-right: 5px;*/
  padding-top: 0px;
- position: relative;
- float: left;
 }
 
 #home{
   min-height:600px;
   background-color: #DDD;
-  width: 655px;
-  margin-right: 5px;
+
   padding:0;
 }
 
 #col3{
-  float: left;
   min-height:600px;
-  background-color: #666;
-  width: 185px;
-  /*padding:0 18px 0 18px;*/
+  background-color: #DFDFDF;
+
+  
 }
 
 .footer{
 
   min-height: 150px;
   background-color: #B55959;
-  margin: 10px 0 20px 0
+  margin: 10px 0 0 0
 }
 
 

@@ -26,6 +26,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
+    bcrypt-ruby (3.0.1-x86-mingw32)
     builder (3.1.4)
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
@@ -57,6 +58,7 @@ GEM
       subexec (~> 0.2.1)
     minitest (4.7.5)
     multi_json (1.10.1)
+    pg (0.17.1-x86-mingw32)
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -113,11 +115,13 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  bcrypt-ruby (~> 3.0.0)
   carrierwave
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
   mini_magick
+  pg
   rails (= 4.0.0.rc2)
   sass-rails (~> 4.0.0.rc2)
   sdoc

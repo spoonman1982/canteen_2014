@@ -36,15 +36,16 @@
       			<div class="page">
 			        <div class="wrapper">
 
-
-							<%# unless params[:action] == 'home'%>
+			        	<div class="row-fluid">
+							
 							<%= render "layouts/left_hand_column"%>
-							<%# end %>
+							
 							<%= yield %>
 							<%= render "layouts/right_hand_column"%>
-							 <div style="clear:both"></div>
+						</div>
+						<div class="row-fluid">
 							<%= render "layouts/footer"%>
-
+						</div>
 			         
 			        </div><!-- /wrapper -->
   

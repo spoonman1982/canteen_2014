@@ -1,4 +1,4 @@
-<div id="col3">
+<div id="col3" class="span3">
 	<div id="latest_news">
 		 <h3>Latest News</h3>
 	 <% news_item = News.order("created_at").first %>
@@ -15,5 +15,14 @@
      <% else %>
         <strong><p>No news today</p></strong>
      <% end %>
+      <div id="user_header">
+          <% if current_user %>
+            Logged in as <%= current_user.email %>.
+            <%= link_to "Log Out", logout_path %>
+          <% else %>
+            <%= link_to "Sign Up", signup_path %> or
+            <%= link_to "Log In", login_path %>
+          <% end %>
+      </div>
   </div>
 </div>
